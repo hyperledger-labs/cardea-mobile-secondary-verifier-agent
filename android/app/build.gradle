@@ -143,8 +143,8 @@ android {
         applicationId "tech.indicio.cardeaverifier"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 4
-        versionName "2.1.0"
+        versionCode 1
+        versionName "1.0.0"
         resValue "string", "build_config_package", "tech.indicio.cardeaverifier"
         missingDimensionStrategy 'react-native-camera', 'general'
     }
