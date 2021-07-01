@@ -27,7 +27,7 @@ do_teardown() {
 
 
 display_usage() {
-    echo "Continuous Integration (CI) helper for sita-mobile-app-holder"
+    echo "Continuous Integration (CI) helper for cardea-mobile-verifier"
     echo
     echo "Usage:"
     echo
