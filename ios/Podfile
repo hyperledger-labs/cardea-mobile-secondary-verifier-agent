@@ -3,11 +3,11 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-project 'cardeamobileverifier',
+project 'cardeaverifier',
         'Dev.Debug' => :debug,
         'Dev.Release' => :release
 
-target 'cardeamobileverifier' do
+target 'cardeaverifier' do
   config = use_native_modules!
 
   use_react_native!(
@@ -16,7 +16,7 @@ target 'cardeamobileverifier' do
     :hermes_enabled => true
   )
 
-  target 'cardeamobileverifierTests' do
+  target 'cardeaverifierTests' do
     inherit! :complete
     # Pods for testing
   end
