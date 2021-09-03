@@ -195,9 +195,9 @@ function Workflow(props) {
       )
 
       setProof({
-        last_name:
+        surname:
           event.proofRecord.presentationMessage.indyProof.requested_proof
-            .revealed_attrs.traveler_last_name.raw,
+            .revealed_attrs.traveler_surnames.raw,
         traveler_id:
           '******' +
           event.proofRecord.presentationMessage.indyProof.requested_proof.revealed_attrs.trusted_traveler_id.raw.slice(
@@ -206,7 +206,7 @@ function Workflow(props) {
         issuer: 'Health Department',
         trusted_date:
           event.proofRecord.presentationMessage.indyProof.requested_proof
-            .revealed_attrs.trusted_date_time.raw,
+            .revealed_attrs.trusted_traveler_issue_date_time.raw,
       })
 
       setApproved(event.proofRecord.isVerified)

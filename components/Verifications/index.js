@@ -54,7 +54,7 @@ function Verifications(props) {
             PresentationMessage,
           ).indyProof.requested_proof.revealed_attrs
           userData.attributes = {
-            trusted_date: data.trusted_date_time.raw,
+            trusted_date: data.trusted_traveler_issue_date_time.raw,
             credentialName: 'Happy Traveler Card',
             issuer: 'Health Department',
             traveler_id: '******' + data.trusted_traveler_id.raw.slice(-4),
