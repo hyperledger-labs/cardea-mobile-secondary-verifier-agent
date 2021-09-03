@@ -55,27 +55,19 @@ function Workflow(props) {
         name: 'Proof request',
         nonce: '1234567890',
         requestedAttributes: {
-          trusted_traveler_id: {
-            name: 'trusted_traveler_id',
+          traveler_surnames: {
+            name: 'traveler_surnames',
             restrictions: [
               {
-                schema_id: 'X2JpGAqC7ZFY4hwKG6kLw9:2:Trusted_Traveler:1.0',
+                schema_id: 'RuuJwd3JMffNwZ43DcJKN1:2:Trusted_Traveler:1.4',
               },
             ],
           },
-          traveler_first_name: {
-            name: 'traveler_first_name',
+          traveler_given_names: {
+            name: 'traveler_given_names',
             restrictions: [
               {
-                schema_id: 'X2JpGAqC7ZFY4hwKG6kLw9:2:Trusted_Traveler:1.0',
-              },
-            ],
-          },
-          traveler_last_name: {
-            name: 'traveler_last_name',
-            restrictions: [
-              {
-                schema_id: 'X2JpGAqC7ZFY4hwKG6kLw9:2:Trusted_Traveler:1.0',
+                schema_id: 'RuuJwd3JMffNwZ43DcJKN1:2:Trusted_Traveler:1.4',
               },
             ],
           },
@@ -83,15 +75,87 @@ function Workflow(props) {
             name: 'traveler_date_of_birth',
             restrictions: [
               {
-                schema_id: 'X2JpGAqC7ZFY4hwKG6kLw9:2:Trusted_Traveler:1.0',
+                schema_id: 'RuuJwd3JMffNwZ43DcJKN1:2:Trusted_Traveler:1.4',
               },
             ],
           },
-          trusted_date_time: {
-            name: 'trusted_date_time',
+          traveler_gender_legal: {
+            name: 'traveler_gender_legal',
             restrictions: [
               {
-                schema_id: 'X2JpGAqC7ZFY4hwKG6kLw9:2:Trusted_Traveler:1.0',
+                schema_id: 'RuuJwd3JMffNwZ43DcJKN1:2:Trusted_Traveler:1.4',
+              },
+            ],
+          },
+          traveler_country: {
+            name: 'traveler_country',
+            restrictions: [
+              {
+                schema_id: 'RuuJwd3JMffNwZ43DcJKN1:2:Trusted_Traveler:1.4',
+              },
+            ],
+          },
+          traveler_origin_country: {
+            name: 'traveler_origin_country',
+            restrictions: [
+              {
+                schema_id: 'RuuJwd3JMffNwZ43DcJKN1:2:Trusted_Traveler:1.4',
+              },
+            ],
+          },
+          traveler_email: {
+            name: 'traveler_email',
+            restrictions: [
+              {
+                schema_id: 'RuuJwd3JMffNwZ43DcJKN1:2:Trusted_Traveler:1.4',
+              },
+            ],
+          },
+          trusted_traveler_id: {
+            name: 'trusted_traveler_id',
+            restrictions: [
+              {
+                schema_id: 'RuuJwd3JMffNwZ43DcJKN1:2:Trusted_Traveler:1.4',
+              },
+            ],
+          },
+          trusted_traveler_issue_date_time: {
+            name: 'trusted_traveler_issue_date_time',
+            restrictions: [
+              {
+                schema_id: 'RuuJwd3JMffNwZ43DcJKN1:2:Trusted_Traveler:1.4',
+              },
+            ],
+          },
+          trusted_traveler_expiration_date_time: {
+            name: 'trusted_traveler_expiration_date_time',
+            restrictions: [
+              {
+                schema_id: 'RuuJwd3JMffNwZ43DcJKN1:2:Trusted_Traveler:1.4',
+              },
+            ],
+          },
+          governance_applied: {
+            name: 'governance_applied',
+            restrictions: [
+              {
+                schema_id: 'RuuJwd3JMffNwZ43DcJKN1:2:Trusted_Traveler:1.4',
+              },
+            ],
+          },
+          credential_issuer_name: {
+            name: 'credential_issuer_name',
+            restrictions: [
+              {
+                schema_id: 'RuuJwd3JMffNwZ43DcJKN1:2:Trusted_Traveler:1.4',
+              },
+            ],
+          },
+          credential_issue_date: {
+            name: 'credential_issue_date',
+            restrictions: [
+              {
+                schema_id: 'RuuJwd3JMffNwZ43DcJKN1:2:Trusted_Traveler:1.4',
               },
             ],
           },
@@ -131,9 +195,9 @@ function Workflow(props) {
       )
 
       setProof({
-        last_name:
+        surname:
           event.proofRecord.presentationMessage.indyProof.requested_proof
-            .revealed_attrs.traveler_last_name.raw,
+            .revealed_attrs.traveler_surnames.raw,
         traveler_id:
           '******' +
           event.proofRecord.presentationMessage.indyProof.requested_proof.revealed_attrs.trusted_traveler_id.raw.slice(
@@ -142,7 +206,7 @@ function Workflow(props) {
         issuer: 'Health Department',
         trusted_date:
           event.proofRecord.presentationMessage.indyProof.requested_proof
-            .revealed_attrs.trusted_date_time.raw,
+            .revealed_attrs.trusted_traveler_issue_date_time.raw,
       })
 
       setApproved(event.proofRecord.isVerified)
