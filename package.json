@@ -1,6 +1,6 @@
 {
   "name": "cardeaverifier",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "private": true,
   "scripts": {
     "style-watch": "onchange '**/*.js' -- prettier --write {{changed}}",
@@ -33,7 +33,7 @@
     "react-native-version": "^4.0.0",
     "react-router-dom": "^5.2.0",
     "react-router-native": "^5.2.0",
-    "rn-indy-sdk": "file:rn-indy-sdk-v0.1.8-proofs.5.tgz"
+    "rn-indy-sdk": "^0.1.10"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
