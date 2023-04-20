@@ -23,6 +23,9 @@ import Notifications from './components/Notifications/index.js'
 
 import {AgentProvider} from './components/AgentProvider/'
 
+import 'react-native-get-random-values'
+import '@azure/core-asynciterator-polyfill'
+
 import BusinessInfo from './components/Registration/BusinessInfo/index.js'
 import Confirmed from './components/Registration/Confirmed/index.js'
 import EntryPoint from './components/EntryPoint/index.js'

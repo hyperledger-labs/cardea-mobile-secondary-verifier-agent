@@ -61,7 +61,7 @@ Assign your network to GENESIS_URL
 
 - Start UP
 
-  > iOS won't work on simulators, so plug in an iOS device, you can get it running through a terminal or open up `cardeamobileverifier.xcworkspace` in xCode
+  > iOS won't work on simulators, so plug in an iOS device, you can get it running through a terminal or open up `cardeaverifier.xcworkspace` in xCode
 
   In Terminal:<br>
   `npm start`<br>
